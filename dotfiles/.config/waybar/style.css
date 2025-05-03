@@ -1,0 +1,121 @@
+/* GENERAL */
+
+/* these have the highest priority */
+* {
+  border-radius: 9px;
+  background: transparent;
+  padding: 1 2px;
+  font-family:
+    JetBrains Mono;
+  font-weight: 700;
+  font-size: 12pt;
+}
+
+tooltip {
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 10;
+}
+
+/* hides main waybar and creates 3 sections */
+
+window#waybar {
+  background: rgba(22, 22, 22, 0.3);
+  border: 1.8 solid rgba(63, 63, 63, 0.5)
+
+	/* border: 2px solid #590045; */
+}
+
+.modules-left {
+  background-color: rgba(0, 0, 0, 0);  
+    margin: 0 0 0 7px;
+    
+  /* border: 2px solid #E45DFF; */
+}
+.modules-right {
+	background-color: rgba(0, 0, 0, 0);
+    margin: 0 0 0 7px;
+  
+  /* border: 2px solid #E45DFF; */
+}
+.modules-center {
+	background-color: rgba(0, 0, 0, 0);
+    margin: 0 0 0 0;
+  
+  /* border: 2px solid #E45DFF; */
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* LEFT */
+
+#workspaces {
+	padding-right: 7;
+}
+
+#workspaces button {
+  transition: none;
+  color: rgba(255, 255, 255, 0.507)
+}
+
+#workspaces button.active {
+  transition: none;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  transition: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 5;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inherit;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* CENTER */
+
+#window {
+  padding-right: 7;
+  padding-left: 7;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0)
+}
+
+/* Hide window module when not focused on window or empty workspace */
+window#waybar.empty #window {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+#pulseaudio {
+  padding-left: 8;
+  padding-right: 8;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* RIGHT */
+
+/* Set up rounding to make these modules look like separate pills */
+#tray {
+  margin-right: 4px;
+  background-color: rgba(0, 0, 0, 0)
+}
+
+#clock, #cpu, #memory {
+	padding-right: 20px;
+  /*font-size: 22px;
+  font-weight: 800;*/
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255)
+}
+
+#custom-song {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 14;
+  margin-right: 10
+}

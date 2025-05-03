@@ -1,0 +1,91 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 24,
+    "spacing": 6,
+    "margin-left": 15,
+    "margin-right": 15,
+    "margin-top": 6,
+    "margin-bottom": -6,
+    "modules-left": ["image","hyprland/workspaces","hyprland/mode"],
+    "modules-center": ["hyprland/window","pulseaudio"],
+    "modules-right": ["custom/cava","custom/song","clock","tray"],
+
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}% {icon}",
+	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "interval": 1,
+
+        "on-click": "kitty -e 'btop'"
+    },
+
+    "memory": {
+        "format": "RAM: {percentage}% ",
+        "interval": 5,
+
+        "on-click": "kitty -e 'btop'"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "<i>muted</i>",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""],
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": " {:%d/%m/%y - %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    	"calendar": {
+            "mode": "month",
+            "mode-mon-col": 4,
+            /*"weeks-pos": "right",*/
+            "on-scroll": 1,
+            "format": {
+                "today": "<span color='#E45DFF'><b>{}</b></span>"
+                /*"weeks": "<span color='#8000ff'><b>{}</b></span>"*/
+            }
+        },
+
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up"
+        }
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "image": {
+        "path": "/home/michele/.config/waybar/assets/archlinux.svg",
+        "size": 20
+        /*"on-click": "kitty -e '/home/michele/.config/waybar/assets/archbtw.sh'"*/
+    },
+
+    "custom/song": {
+        "exec": "playerctl -p spotify metadata --format '{{uc(title)}} - {{uc(artist)}}'",
+        "interval": 1,
+        "format": "{} 🎵",
+        "on-click": "playerctl -p spotify play-pause",
+        "exec-if": "playerctl -p spotify status | grep -q Playing"
+    }
+}
