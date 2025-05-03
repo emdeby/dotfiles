@@ -5,7 +5,7 @@
 
 -------------------------------------
 
-### core-packages overview
+## core-packages overview
 | | | |
 |----------------|-|----------------|
 | wm             |-| hyprland       |
@@ -27,13 +27,22 @@
 | code-editor    |-| vscodium       |
 | font           |-| JetBrains Mono |
 
-### keybindings
+## keybindings
 
-| | |
-|---------------------|-------------------|
-| terminal            | SUPER + Q         |
-| launcher            | SUPER + R         |
-| browser             | SUPER + W         |
-| file-manager        | SUPER + E         |
-| activate nightshift | SUPER + N         |
-| reload waybar       | SUPER + SHIFT + R |
+`SUPER + Q` - terminal
+
+`SUPER + R` - launcher
+
+`SUPER + W` - browser
+
+`SUPER + C` - close window
+
+`SUPER + E` - file-manager
+
+`SUPER + N` - activate nightshift
+
+`SUPER + L` - lock system
+
+`SUPER + SHIFT + R` - reload waybar
+
+`SUPER + SHIFT + G` - copy/paste dotfiles changes into local repo
