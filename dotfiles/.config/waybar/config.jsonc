@@ -8,7 +8,7 @@
     "margin-top": 6,
     "margin-bottom": -6,
     "modules-left": ["image","hyprland/workspaces","hyprland/mode"],
-    "modules-center": ["hyprland/window","pulseaudio"],
+    "modules-center": ["pulseaudio"],
     "modules-right": ["custom/cava","custom/song","clock","tray"],
 
     "hyprland/window": {
