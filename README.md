@@ -9,7 +9,7 @@
 | | | |
 |----------------|-|----------------|
 | wm             |-| hyprland       |
-| dm             |-| sddm           |
+| dm             |-| ly             |
 | terminal       |-| kitty          |
 | shell          |-| bash           |
 | statusbar      |-| waybar         |
@@ -22,7 +22,7 @@
 | music player   |-| spotify        |
 | image viewer   |-| imv            |
 | video player   |-| mpv            |
-| vpn            |-| mullvad        |
+| vpn            |-| mullvad-vpn    |
 | fetch          |-| neofetch       |
 | code-editor    |-| vscodium       |
 | font           |-| JetBrains Mono |
