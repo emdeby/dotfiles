@@ -46,3 +46,5 @@
 `SUPER + SHIFT + R` - reload waybar
 
 `SUPER + SHIFT + G` - copy/paste dotfiles changes into local repo
+
+`SUPER + SHIFT + W` - waybar on/off
