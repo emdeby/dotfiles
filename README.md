@@ -17,7 +17,7 @@
 | launcher       |-| rofi           |
 | browser        |-| firefox        |
 | lockscreen     |-| hyprlock       |
-| nightshift     |-| hpyrsunset     |
+| nightshift     |-| hyprsunset     |
 | wallpaper      |-| hyprpaper      |
 | music player   |-| spotify        |
 | image viewer   |-| imv            |
