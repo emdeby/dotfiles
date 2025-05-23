@@ -26,6 +26,7 @@
 | fetch          |-| neofetch       |
 | code-editor    |-| vscodium       |
 | font           |-| JetBrains Mono |
+| notifications  |-| dunst          |
 
 ## keybindings
 
