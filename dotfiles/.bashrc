@@ -16,5 +16,8 @@ alias lal='ls -a -l'
 
 alias neo='neo-matrix --color=gray -D'
 
+# Complete system update
+alias yayyy='yay -Syyu --noconfirm'
+
 # Autocommands on terminal launch
 neofetch

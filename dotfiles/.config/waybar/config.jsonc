@@ -84,7 +84,7 @@
     "custom/song": {
         "exec": "playerctl -p spotify metadata --format '{{uc(title)}} - {{uc(artist)}}'",
         "interval": 1,
-        "format": "{} 🎵",
+        "format": "{}",
         "on-click": "playerctl -p spotify play-pause",
         "exec-if": "playerctl -p spotify status | grep -q Playing"
     }
