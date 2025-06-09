@@ -23,7 +23,7 @@
 | image viewer   |-| imv            |
 | video player   |-| mpv            |
 | vpn            |-| mullvad-vpn    |
-| fetch          |-| neofetch       |
+| fetch          |-| catnap         |
 | code-editor    |-| vscodium       |
 | font           |-| JetBrains Mono |
 | notifications  |-| dunst          |
