@@ -20,4 +20,4 @@ alias neo='neo-matrix --color=gray -D'
 alias yayyy='yay -Syyu --noconfirm'
 
 # Autocommands on terminal launch
-neofetch
+catnap
