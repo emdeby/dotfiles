@@ -19,5 +19,8 @@ alias neo='neo-matrix --color=gray -D'
 # Complete system update
 alias yayyy='yay -Syyu --noconfirm'
 
+# Poweroff
+alias byeee='systemctl poweroff'
+
 # Autocommands on terminal launch
 catnap
