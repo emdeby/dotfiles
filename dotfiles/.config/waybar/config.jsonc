@@ -9,7 +9,7 @@
     "margin-bottom": -6,
     "modules-left": ["image","hyprland/workspaces","hyprland/mode"],
     "modules-center": ["pulseaudio"],
-    "modules-right": ["custom/cava","custom/song","clock","tray"],
+    "modules-right": ["custom/cava","custom/song","clock","custom/dlsort","tray"],
 
     "hyprland/window": {
         "format": "{title}",
@@ -87,5 +87,12 @@
         "format": "{}",
         "on-click": "playerctl -p spotify play-pause",
         "exec-if": "playerctl -p spotify status | grep -q Playing"
+    },
+
+    "custom/dlsort": {
+        "exec": "~/scripts/dlsort_waybar.sh",
+        "interval": 1,
+        "on-click": "~/scripts/dlsort_check.sh",
+        "tooltip-format": "Automatic-Download-Sorter" 
     }
 }
