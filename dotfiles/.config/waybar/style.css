@@ -3,7 +3,7 @@
 /* these have the highest priority */
 * {
   border-radius: 9px;
-  background: transparent;
+  /* background: transparent; */
   padding: 1 2px;
   font-family:
     JetBrains Mono;
@@ -19,7 +19,7 @@ tooltip {
 /* hides main waybar and creates 3 sections */
 
 window#waybar {
-  background: rgba(22, 22, 22, 0.3);
+  background: rgba(22, 22, 22, 0.9);
   border: 1.8 solid rgba(63, 63, 63, 0.5)
 
 	/* border: 2px solid #590045; */
@@ -103,6 +103,12 @@ window#waybar.empty #window {
 #tray {
   margin-right: 4px;
   background-color: rgba(0, 0, 0, 0)
+}
+
+#language {
+  color: rgb(255, 255, 255);
+  font-size: 14;
+  font-weight: 300
 }
 
 #clock, #cpu, #memory {

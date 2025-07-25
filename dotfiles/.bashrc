@@ -17,11 +17,16 @@ alias lal='ls -a -l'
 alias neo='neo-matrix --color=gray -D'
 
 # Complete system update
-alias yayyy='yay -Syyu --noconfirm'
+alias yayyy='yay -Syu --noconfirm'
+# Complete system update with database force-update
+alias fyayyy='yay -Syyu --noconfirm'
 
 # Poweroff and reboot
 alias byeee='systemctl poweroff'
 alias cya='systemctl reboot'
+
+# Clamscan
+alias scanclam='sudo clamscan -r'
 
 # Autocommands on terminal launch
 catnap
