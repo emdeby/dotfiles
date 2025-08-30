@@ -132,3 +132,9 @@ window#waybar.empty #window {
   font-size: 14;
   margin-left: 1
 }
+
+#custom-sysupdate {
+  color: rgb(255, 255, 255);
+  font-size: 14;
+  padding-right: 4;
+}

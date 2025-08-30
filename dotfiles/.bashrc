@@ -28,5 +28,9 @@ alias cya='systemctl reboot'
 # Clamscan
 alias scanclam='sudo clamscan -r'
 
+# Custom global variables
+
 # Autocommands on terminal launch
+printf "Last system-update: "
+cat ~/.local/share/myutils/sysupdate/lastsysup.txt
 catnap
