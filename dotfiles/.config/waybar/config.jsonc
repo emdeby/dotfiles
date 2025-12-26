@@ -7,9 +7,9 @@
     "margin-right": 15,
     "margin-top": 6,
     "margin-bottom": -6,
-    "modules-left": ["image","hyprland/workspaces","hyprland/mode"],
-    "modules-center": ["pulseaudio"],
-    "modules-right": ["custom/song","custom/sysupdate","clock","hyprland/language","custom/dlsort","tray"],
+    "modules-left": ["group/arch","pulseaudio/slider","pulseaudio","hyprland/mode"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["group/song","group/dashboard","clock","hyprland/language","custom/dlsort","tray"],
 
     "hyprland/window": {
         "format": "{title}",
@@ -32,7 +32,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{volume}%",
         "format-bluetooth": "B-{volume}%",
         "format-muted": "<i>muted</i>",
         "format-icons": {
@@ -48,6 +48,12 @@
             "default": ["", ""],
         },
         "on-click": "pavucontrol"
+    },
+
+    "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
     },
 
     "clock": {
@@ -76,30 +82,112 @@
         "spacing": 8
     },
 
+    "group/arch": {
+        "orientation": "horizontal",
+        	"drawer": {
+                "transition-duration": 500,
+		        "transition-left-to-right": true
+	    },
+        "modules": [
+            "image",
+            "custom/poweroff",
+            "custom/reboot",
+            "custom/logout",
+            "custom/suspend",
+            "custom/lockscreen"
+        ]
+    },
+
+    "custom/poweroff": {
+        "format": "⏻",
+        "on-click": "~/scripts/waybar/poweroff_waybar.sh",
+        "tooltip-format": "Poweroff"
+    },
+    
+    "custom/reboot": {
+        "format": "↺",
+        "on-click": "~/scripts/waybar/reboot_waybar.sh",
+        "tooltip-format": "Reboot"
+    },
+    
+
+    "custom/logout": {
+        "format": "←",
+        "on-click": "~/scripts/waybar/logout_waybar.sh",
+        "tooltip-format": "Logout"
+    },
+    
+    "custom/suspend": {
+        "format": "🌙",
+        "on-click": "~/scripts/waybar/suspend_waybar.sh",
+        "tooltip-format": "Suspend"
+    },
+    
+    "custom/lockscreen": {
+        "format": "🔒",
+        "on-click": "hyprlock",
+        "tooltip-format": "Lock screen"
+    },
+        
+
     "image": {
-        "path": "/home/michele/.config/waybar/assets/archlinux.svg",
+        "path": "/home/michele/.config/waybar/assets/archlinux_white.png",
         "size": 20
-        /*"on-click": "kitty -e '/home/michele/.config/waybar/assets/archbtw.sh'"*/
+    },
+
+    "group/song": {
+        "orientation": "horizontal",
+        	"drawer": {
+                "transition-duration": 300,
+		        "transition-left-to-right": false,
+                "click-to-reveal": true
+	    },
+        "modules": [
+            "custom/song",
+            "custom/songlength"
+        ]
+    },
+
+    "custom/songlength": {
+        "exec": "~/scripts/waybar/song_waybar.sh",
+        "interval": 1,
+        "exec-if": "playerctl -p spotify status | grep -q Playing"
     },
 
     "custom/song": {
         "exec": "playerctl -p spotify metadata --format '{{uc(title)}} - {{uc(artist)}}'",
         "interval": 1,
-        "format": "{}",
-        "on-click": "playerctl -p spotify play-pause",
         "exec-if": "playerctl -p spotify status | grep -q Playing"
     },
 
-    "custom/dlsort": {
+    /*"custom/dlsort": {
         "exec": "~/scripts/dlsort_waybar.sh",
         "interval": 1,
         "on-click": "~/scripts/dlsort_check.sh",
         "tooltip-format": "Automatic-Download-Sorter" 
-    },
+    },*/
 
     "hyprland/language": {
         "format-en": "US",
         "format-de": "DE"
+    },
+
+    "group/dashboard": {
+        "orientation": "horizontal",
+        	"drawer": {
+                "transition-duration": 300,
+		        "transition-left-to-right": false
+	    },
+        "modules": [
+            "custom/dashboard",
+            "custom/sysupdate",
+            "custom/nightshift"
+        ]
+    },
+
+    "custom/dashboard": {
+        "format": "☰",
+        "tooltip": false
     },
 
     "custom/sysupdate": {
@@ -108,5 +196,12 @@
         "format": "",
         "tooltip-format": "Last system-update: {}",
         "on-click": "kitty --title 'sysupdate' -e ~/scripts/sysupdate.sh"
+    },
+
+    "custom/nightshift": {
+        "exec": "~/scripts/waybar/nightshift_waybar.sh",
+        "interval": 1,
+        "on-click": "~/scripts/nightshift.sh",
+        "return-type": "json"
     }
 }

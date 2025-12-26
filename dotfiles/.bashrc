@@ -34,3 +34,9 @@ alias scanclam='sudo clamscan -r'
 printf "Last system-update: "
 cat ~/.local/share/myutils/sysupdate/lastsysup.txt
 catnap
+
+# SSH to plex-vm
+alias plexssh='kitty +kitten ssh plexadmin@192.168.178.161'
+
+# Manually mount hdd2
+alias mounthdd2='sudo mount /dev/sdb2 /mnt/hdd2-manual/'

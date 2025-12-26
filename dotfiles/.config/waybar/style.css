@@ -5,8 +5,6 @@
   border-radius: 9px;
   /* background: transparent; */
   padding: 1 2px;
-  font-family:
-    JetBrains Mono;
   font-weight: 700;
   font-size: 12pt;
 }
@@ -48,27 +46,74 @@ window#waybar {
 
 /* LEFT */
 
-#workspaces {
-	padding-right: 7;
+#custom-poweroff {
+  color: rgb(255, 255, 255);
+  padding-right: 10;
+  padding-left: 12;
+  padding-bottom: 1;
+  font-size: 21;
 }
 
-#workspaces button {
-  transition: none;
-  color: rgba(255, 255, 255, 0.507)
+#custom-reboot {
+  color: rgb(255, 255, 255);
+  padding-right: 10;
+  padding-top: 2;
+  font-size: 18;
+  font-weight: 900;
 }
 
-#workspaces button.active {
-  transition: none;
-  color: #ffffff;
+#custom-logout {
+  color: rgb(255, 255, 255);
+  font-size: 23;
+  padding-right: 10;
+  padding-bottom: 3;
+  font-weight: 500;
 }
 
-#workspaces button:hover {
-  transition: none;
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 5;
+#custom-suspend {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 15;
+  padding-right: 10;
+  padding-bottom: 2;
+}
+
+#custom-lockscreen {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  padding-bottom: 2;
+}
+
+
+#pulseaudio {
+  padding-left: 8;
+  padding-right: 8;
+  color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0);
-  box-shadow: inherit;
 }
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 7px;
+    min-width: 100px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    border-color: #ffffff;
+}
+
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -88,11 +133,29 @@ window#waybar.empty #window {
   opacity: 0;
 }
 
-#pulseaudio {
-  padding-left: 8;
-  padding-right: 8;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0);
+#workspaces {
+	padding-right: 7;
+}
+
+#workspaces button {
+  color: rgba(255, 255, 255, 0.507);
+  padding-right: 11;
+  padding-left: 11;
+  margin-right: 6;
+  border-radius: 4;
+  transition: padding 0.15s ease-in-out;
+  border-radius: 8;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  padding: 0 20 0 20;
+  background-color: #252525;
+}
+
+#workspaces button:hover {
+  color: rgba(16, 16, 16, 1);
+  padding: 0 20 0 20;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -101,14 +164,14 @@ window#waybar.empty #window {
 
 /* Set up rounding to make these modules look like separate pills */
 #tray {
-  margin-right: 4px;
+  margin-right: 8px;
   background-color: rgba(0, 0, 0, 0)
 }
 
 #language {
   color: rgb(255, 255, 255);
   font-size: 14;
-  font-weight: 300
+  font-weight: 300;
 }
 
 #clock, #cpu, #memory {
@@ -119,6 +182,13 @@ window#waybar.empty #window {
   color: rgb(255, 255, 255)
 }
 
+#custom-songlength {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 11;
+  padding-top: 2;
+}
+
 #custom-song {
   color: rgb(255, 255, 255);
   font-weight: 300;
@@ -126,15 +196,28 @@ window#waybar.empty #window {
   margin-right: 10
 }
 
-#custom-dlsort {
+/*#custom-dlsort {
   color: rgb(228, 228, 228);
   font-weight: 300;
   font-size: 14;
   margin-left: 1
+}*/
+
+#custom-dashboard {
+  color: rgb(255, 255, 255);
+  font-size: 22;
+  padding-bottom: 4;
 }
 
 #custom-sysupdate {
   color: rgb(255, 255, 255);
   font-size: 14;
-  padding-right: 4;
+  padding-right: 15;
+}
+
+#custom-nightshift {
+  color: rgb(255, 255, 255);
+  font-size: 18 ;
+  padding-right: 10;
+  padding-bottom: 2;
 }
