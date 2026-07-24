@@ -14,8 +14,6 @@ tooltip {
   border-radius: 10;
 }
 
-/* hides main waybar and creates 3 sections */
-
 window#waybar {
   background: rgba(22, 22, 22, 0.9);
   border: 1.8 solid rgba(63, 63, 63, 0.5)
@@ -162,7 +160,6 @@ window#waybar.empty #window {
 
 /* RIGHT */
 
-/* Set up rounding to make these modules look like separate pills */
 #tray {
   margin-right: 8px;
   background-color: rgba(0, 0, 0, 0)

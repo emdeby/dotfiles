@@ -19,7 +19,7 @@ alias neo='neo-matrix --color=gray -D'
 # Complete system update
 alias yayyy='yay -Syu --noconfirm'
 # Complete system update with database force-update
-alias fyayyy='yay -Syyu --noconfirm'
+alias fyayyy='yay -Syyu --noconfirm; printf "%s\n" "$(date +"%d/%m/%Y, %H:%M")" > ~/.local/share/myutils/sysupdate/lastsysup.txt'
 
 # Poweroff and reboot
 alias byeee='systemctl poweroff'
@@ -40,3 +40,11 @@ alias plexssh='kitty +kitten ssh plexadmin@192.168.178.161'
 
 # Manually mount hdd2
 alias mounthdd2='sudo mount /dev/sdb2 /mnt/hdd2-manual/'
+
+if [ -d "$HOME/.local/share/myutils/scripts" ]
+then
+	PATH="$PATH:$HOME/.local/share/myutils/scripts"
+fi
+
+# history with timestamp
+HISTTIMEFORMAT="%d/%m/%y %T "

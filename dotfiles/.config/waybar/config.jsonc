@@ -7,28 +7,13 @@
     "margin-right": 15,
     "margin-top": 6,
     "margin-bottom": -6,
-    "modules-left": ["group/arch","pulseaudio/slider","pulseaudio","hyprland/mode"],
+    "modules-left": ["group/arch","pulseaudio/slider","pulseaudio"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/song","group/dashboard","clock","hyprland/language","custom/dlsort","tray"],
+    "modules-right": ["group/song","group/dashboard","clock","hyprland/language","tray"],
 
     "hyprland/window": {
         "format": "{title}",
         "icon": true
-    },
-
-    "cpu": {
-        "format": "CPU: {usage}% {icon}",
-	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "interval": 1,
-
-        "on-click": "kitty -e 'btop'"
-    },
-
-    "memory": {
-        "format": "RAM: {percentage}% ",
-        "interval": 5,
-
-        "on-click": "kitty -e 'btop'"
     },
 
     "pulseaudio": {
@@ -51,9 +36,9 @@
     },
 
     "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
     },
 
     "clock": {
@@ -82,6 +67,13 @@
         "spacing": 8
     },
 
+    /* currently broken, thats why I removed it from group/arch */
+    "image#arch": {
+        "path": "/home/michele/.config/waybar/assets/archlinux_white.png",
+        "size": 20
+    },
+    /* */
+
     "group/arch": {
         "orientation": "horizontal",
         	"drawer": {
@@ -89,7 +81,6 @@
 		        "transition-left-to-right": true
 	    },
         "modules": [
-            "image",
             "custom/poweroff",
             "custom/reboot",
             "custom/logout",
@@ -128,12 +119,6 @@
         "on-click": "hyprlock",
         "tooltip-format": "Lock screen"
     },
-        
-
-    "image": {
-        "path": "/home/michele/.config/waybar/assets/archlinux_white.png",
-        "size": 20
-    },
 
     "group/song": {
         "orientation": "horizontal",
@@ -149,7 +134,7 @@
     },
 
     "custom/songlength": {
-        "exec": "~/scripts/waybar/song_waybar.sh",
+        "exec": "~/scripts/waybar/song_length_waybar.sh",
         "interval": 1,
         "exec-if": "playerctl -p spotify status | grep -q Playing"
     },
