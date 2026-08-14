@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > These are **my personal dotfiles** and are not meant to be installed on other systems.
 
--------------------------------------
+---
 
 ## core-packages overview
 | | | |
@@ -49,3 +49,22 @@
 `SUPER + SHIFT + G` - copy/paste dotfiles changes into local repo
 
 `SUPER + SHIFT + W` - waybar on/off
+
+## installation
+
+> [!CAUTION]
+> Install at own risk!
+
+1. clone repo:
+```
+git clone https://github.com/emdeby/dotfiles.git
+```
+
+2. change directory:
+```
+cd dotfiles/
+```
+3. run install.sh:
+```
+./install.sh
+```
