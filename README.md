@@ -56,15 +56,14 @@
 > Install at own risk!
 
 1. clone repo:
-```
+```bash
 git clone https://github.com/emdeby/dotfiles.git
 ```
-
 2. change directory:
-```
+```bash
 cd dotfiles/
 ```
 3. run install.sh:
-```
+```basg
 ./install.sh
 ```
