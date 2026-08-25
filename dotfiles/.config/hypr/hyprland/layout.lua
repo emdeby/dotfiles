@@ -1,3 +1,10 @@
+--     __                    __   --
+--    / /__ ___ _____  __ __/ /_  --
+--   / / _ `/ // / _ \/ // / __/  --
+--  /_/\_,_/\_, /\___/\_,_/\__/   --
+--         /___/                  --
+
+
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {

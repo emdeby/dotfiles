@@ -1,3 +1,10 @@
+--              __        --
+--    ______ __/ /__ ___  --
+--   / __/ // / / -_|_-<  --
+--  /_/  \_,_/_/\__/___/  --
+--                        --
+
+
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
