@@ -48,3 +48,19 @@ fi
 
 # history with timestamp
 HISTTIMEFORMAT="%d/%m/%y %T "
+
+# scriptctl completion'
+_scriptctl() {
+	local cur=${COMP_WORDS[COMP_CWORD]}
+	
+	if [[ $COMP_CWORD -eq 1 ]]
+	then
+		COMPREPLY=($(compgen -W "create move list exec remove" -- $cur))
+	fi
+
+	if [[ ${COMP_WORDS[1]} == "exec" || ${COMP_WORDS[1]} == "remove" || ${COMP_WORDS[1]} == "move"  ]]
+	then
+		COMPREPLY=($(compgen -W "$(ls -p ~/scripts/ | grep -v /)" -- $cur))
+	fi
+}
+complete -F _scriptctl scriptctl

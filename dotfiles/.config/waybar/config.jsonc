@@ -7,7 +7,7 @@
     "margin-right": 15,
     "margin-top": 6,
     "margin-bottom": -6,
-    "modules-left": ["group/arch","pulseaudio/slider","pulseaudio"],
+    "modules-left": ["group/power","pulseaudio/slider","pulseaudio"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["group/song","group/dashboard","clock","hyprland/language","tray"],
 
@@ -30,7 +30,7 @@
             "phone-muted": "",
             "portable": "",
             "car": "",
-            "default": ["", ""],
+            "default": ["", ""]
         },
         "on-click": "pavucontrol"
     },
@@ -74,7 +74,7 @@
     },
     /* */
 
-    "group/arch": {
+    "group/power": {
         "orientation": "horizontal",
         	"drawer": {
                 "transition-duration": 500,
@@ -168,11 +168,14 @@
             "custom/sysupdate",
             "custom/nightshift"
         ]
+
+
     },
 
     "custom/dashboard": {
         "format": "☰",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "swaync-client -t"
     },
 
     "custom/sysupdate": {
