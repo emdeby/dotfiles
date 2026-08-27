@@ -14,5 +14,5 @@ global browser                      =   "firefox"
 --- UTILS ---
 global lockscreen                   =   "hyprlock"
 global todo                         =   "kitty --title todo -e ~/git/cli-todolist/todolist_dev_main.sh"
-global screenshot_selected_region   =   "grim -g $(slurp) ${HOME}/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
-global screenshot_focued_screen     =   "grim -o $(hyprctl -j monitors | jq -r '.[] | select(.focused) | .name') ${HOME}/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
+global screenshot_selected_region   =   "hyprshot -m region -f $(date '+%y%m%d_%H-%M-%S').png -o ${HOME}/Screenshots/"
+global screenshot_focused_screen    =   "hyprshot -m active -m output -f $(date '+%y%m%d_%H-%M-%S').png -o ${HOME}/Screenshots/"

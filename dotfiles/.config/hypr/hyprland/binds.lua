@@ -27,7 +27,7 @@ hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("~/scripts/tornyx.sh"))
 hl.bind("SUPER + T", hl.dsp.exec_cmd(todo))
 -- SCREENSHOTS:
 hl.bind("SUPER + X", hl.dsp.exec_cmd(screenshot_selected_region))
-hl.bind("SUPER + Z", hl.dsp.exec_cmd(screenshot_focued_screen))
+hl.bind("SUPER + Z", hl.dsp.exec_cmd(screenshot_focused_screen))
 
 -- Move focus with SUPER + arrow keys
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "left" }))
