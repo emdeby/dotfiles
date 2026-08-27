@@ -1,4 +1,12 @@
-# dotfiles
+```
+                                     /\               .___            __            
+                    ____     _____   )/   ______    __| _/   ____   _/  |_    ______
+                  _/ __ \   /     \      /  ___/   / __ |   /  _ \  \   __\  /  ___/
+                  \  ___/  |  Y Y  \     \___ \   / /_/ |  (  <_> )  |  |    \___ \ 
+                   \___  > |__|_|  /    /____  >  \____ |   \____/   |__|   /____  >
+                       \/        \/          \/        \/                        \/ 
+```
+---
 
 > [!IMPORTANT]
 > These are **my personal dotfiles** and are not meant to be installed on other systems.
