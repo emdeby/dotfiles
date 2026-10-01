@@ -64,3 +64,7 @@ _scriptctl() {
 	fi
 }
 complete -F _scriptctl scriptctl
+
+. ~/git/.git-prompt.sh
+
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '

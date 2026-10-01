@@ -7,7 +7,6 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
 hl.on("hyprland.start", function () 
-  hl.exec_cmd(terminal)
   hl.exec_cmd("waybar & hyprpaper")
   hl.exec_cmd("mullvad-vpn")
   hl.exec_cmd("hypridle")
